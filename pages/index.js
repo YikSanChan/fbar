@@ -4,7 +4,8 @@ import axios from "axios";
 import styles from "../styles/Home.module.css";
 
 const ENV = process.env.NODE_ENV || "development";
-const API_HOST_URL = ENV === "production" ? "https://fbar.vercel.app" : "http://localhost:3000";
+const API_HOST_URL =
+  ENV === "production" ? "https://fbar.vercel.app" : "http://localhost:3000";
 
 export default function Home() {
   const [jp, setJp] = useState("");

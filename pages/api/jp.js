@@ -69,5 +69,9 @@ export default (req, res) => {
     query: { q },
   } = req;
   res.statusCode = 200;
-  res.json(combination(q));
+  if (!q) {
+    res.json([]);
+  } else {
+    res.json(combination(q));
+  }
 };
