@@ -69,9 +69,5 @@ export default (req, res) => {
     query: { q },
   } = req;
   res.statusCode = 200;
-  if (q.length >= 3) {
-    res.end("You, too long!");
-  } else {
-    res.json(combination(q));
-  }
+  res.json(combination(q));
 };
